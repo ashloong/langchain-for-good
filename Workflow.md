@@ -17,15 +17,30 @@
 
 Goal: Build a stateful medical conversation agent that conducts multi-turn dialogues to gather symptoms, assess risk, and provide educational guidance using cyclical LangGraph workflows.
 
-Core LangGraph Components:
+LangChain workflow 
+```
+User ↔ Chat Interface ↔ LangChain Agent
+         ↕
+   Symptom Parsing Chain
+         ↕
+   Retrieval from:
+     📄 Medical PDFs (Vector DB)
+     🌐 Trusted Web Sources (optional)
+         ↕
+   Hugging Face LLM (Inference API)
+         ↕
+   Output Parser → User-friendly medical summary
+```
 
-State Management: Persistent conversation memory
+LangGraph Components for extension:
 
-Cyclical Flows: Adaptive questioning based on previous responses
+- State Management: Persistent conversation memory
 
-Conditional Routing: Dynamic path selection based on medical urgency
+- Cyclical Flows: Adaptive questioning based on previous responses
 
-Human-in-the-Loop: Seamless integration of user responses
+- Conditional Routing: Dynamic path selection based on medical urgency
+
+- Human-in-the-Loop: Seamless integration of user responses
 
 
 
