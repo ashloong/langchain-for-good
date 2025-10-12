@@ -1,10 +1,23 @@
-Here’s a concise summary of the **workflow steps** to build your **medical support agent** using **LangChain + Hugging Face (free API)**:
+**workflow steps** to build **medical support agent** using **LangChain + Hugging Face (free API)**:
+
+1️⃣ Project goal & setup
+2️⃣ Environment & dependencies
+3️⃣ Step-by-step LangChain workflow 
+4️⃣ MVP
+5️⃣ How to extend the project
 
 ---
 
-## 🩺 Medical Agent – Step-by-Step Summary
+## 🩺 Medical Agent – Step-by-Step 
 
-### **1️⃣ Setup**
+### **1️⃣ Goal and Setup**
+
+The goal is to build a conversational Medical Support Agent that:
+- Asks follow-up questions based on user symptoms.
+- Searches and summarizes relevant information from uploaded PDFs and reputable web sources.
+- Generates non-diagnostic, educational responses (e.g., “Possible causes include…”, “Consult a physician if…”).
+- Uses LangChain framework + Hugging Face free tokens API
+
 
 * Install required packages:
 
@@ -20,7 +33,7 @@ Here’s a concise summary of the **workflow steps** to build your **medical sup
 
 ---
 
-### **2️⃣ Load Medical PDFs**
+### **2️⃣ Load Medical Texts**
 
 * Use `PyPDFLoader` to load medical documents (e.g., WHO or CDC guidelines).
 * Split into text chunks for embedding:
@@ -30,6 +43,29 @@ Here’s a concise summary of the **workflow steps** to build your **medical sup
   from langchain.text_splitter import RecursiveCharacterTextSplitter
   ```
 
+* Use web loaders to extract medical content from trusted sources:
+
+``` 
+from langchain_community.document_loaders import WebBaseLoader, AsyncHtmlLoader
+from langchain_community.document_transformers import Html2TextTransformer
+```
+
+Method 1: WebBaseLoader (simple)
+
+```
+loader = WebBaseLoader(["https://www.who.int/health-topics", 
+                       "https://www.cdc.gov/health-topics.html"])
+docs = loader.load()
+  ```
+
+Method 2: AsyncHtmlLoader + Html2TextTransformer (for multiple pages)
+
+  ```
+loader = AsyncHtmlLoader(["https://www.mayoclinic.org/diseases-conditions"])
+html_docs = loader.load()
+html2text = Html2TextTransformer()
+clean_docs = html2text.transform_documents(html_docs)
+  ```
 ---
 
 ### **3️⃣ Create Vector Store**
