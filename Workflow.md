@@ -1,4 +1,5 @@
-**workflow steps** to build **medical support agent** using **LangChain + Hugging Face (free API)**:
+**Workflow steps** to build **medical support agent** using **LangChain + Hugging Face (free API)**:
+
 
 1️⃣ Project goal & setup
 
