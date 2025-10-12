@@ -8,8 +8,6 @@
 
 ---
 
-## 🩺 Medical Agent – Step-by-Step 
-
 ### **1️⃣ Goal and Setup**
 
 The goal is to build a conversational Medical Support Agent that:
