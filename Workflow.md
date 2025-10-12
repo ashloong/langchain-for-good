@@ -42,7 +42,7 @@ LangGraph Components for extension:
 
 - Human-in-the-Loop: Seamless integration of user responses
 
-
+---
 
 * Install required packages:
 
