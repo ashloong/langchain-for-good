@@ -1,28 +1,47 @@
 **workflow steps** to build **medical support agent** using **LangChain + Hugging Face (free API)**:
 
 1️⃣ Project goal & setup
+
 2️⃣ Environment & dependencies
+
 3️⃣ Step-by-step LangChain workflow 
+
 4️⃣ MVP
+
 5️⃣ How to extend the project
 
 ---
 
 ### **1️⃣ Goal and Setup**
 
-The goal is to build a conversational Medical Support Agent that:
-- Asks follow-up questions based on user symptoms.
-- Searches and summarizes relevant information from uploaded PDFs and reputable web sources.
-- Generates non-diagnostic, educational responses (e.g., “Possible causes include…”, “Consult a physician if…”).
-- Uses LangChain framework + Hugging Face free tokens API
+Goal: Build a stateful medical conversation agent that conducts multi-turn dialogues to gather symptoms, assess risk, and provide educational guidance using cyclical LangGraph workflows.
+
+Core LangGraph Components:
+
+State Management: Persistent conversation memory
+
+Cyclical Flows: Adaptive questioning based on previous responses
+
+Conditional Routing: Dynamic path selection based on medical urgency
+
+Human-in-the-Loop: Seamless integration of user responses
+
 
 
 * Install required packages:
 
   ```bash
-  pip install langchain langchain-huggingface huggingface_hub langchain-community langchain-chroma python-dotenv
+  pip install langchain langgraph langchain-huggingface huggingface_hub 
+  pip install langchain-community langchain-chroma python-dotenv beautifulsoup4 playwright
   ```
-* Get your **Hugging Face API key** → [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+
+Install Playwright:
+
+  ```bash
+  playwright install
+  ```
+
+* Get **Hugging Face API key** → [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
   Add to `.env`:
 
   ```
@@ -140,13 +159,13 @@ print(response)
 
 ---
 
-### **9️⃣ (Optional) Add Trusted Web Sources**
+### **9️⃣ Add Trusted Web Sources**
 
 * Use `DuckDuckGoSearchResults` to gather recent info from WHO, CDC, Mayo Clinic.
 
 ---
 
-### **🔟 (Optional) LangGraph Workflow**
+### **🔟 Extend with LangGraph Workflow**
 
 * Create nodes for:
 
@@ -156,14 +175,12 @@ print(response)
   * `Feedback`
 * Connect edges to form a looped dialogue flow.
 
----
-
-### ⚕️ Key Notes
-
-* Use **trusted data only** (WHO, CDC, NIH).
-* Always include disclaimers (“This is not medical advice”).
-* Store and handle symptom data securely.
+Install LangGraph
+```bash
+pip install langgraph
+```
 
 ---
 
-Would you like me to make a **visual diagram or LangGraph code version** of this workflow next? (It would show the flow from user → retriever → LLM → feedback.)
+
+
