@@ -48,13 +48,7 @@ LangGraph Components for extension:
 
   ```bash
   pip install langchain langgraph langchain-huggingface huggingface_hub 
-  pip install langchain-community langchain-chroma python-dotenv beautifulsoup4 playwright
-  ```
-
-Install Playwright:
-
-  ```bash
-  playwright install
+  pip install langchain-community langchain-chroma python-dotenv beautifulsoup4 
   ```
 
 * Get **Hugging Face API key** → [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
