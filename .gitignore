@@ -1,4 +1,12 @@
+# Environment
 .venv/
-.env
+
+# Cache
 .ipynb_checkpoints/
 __pycache__/
+
+# API keys
+.env
+
+# Local vectorstores
+chroma_db/
