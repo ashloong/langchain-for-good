@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Bootstrap .venv (cross-platform)",
+      "type": "shell",
+      "command": "echo Bootstrapping .venv...",
+      "problemMatcher": [],
+      "runOptions": { "runOn": "folderOpen" },
+      "windows": {
+        "command": "powershell -ExecutionPolicy Bypass -Command \"if (-Not (Test-Path .venv)) { py -m venv .venv }; .\\.venv\\Scripts\\Activate.ps1; python -m pip install --upgrade pip; if (Test-Path requirements.txt) { python -m pip install -r requirements.txt }; python -m pip install ipykernel notebook jupyter_client traitlets tornado nest-asyncio; python -m ipykernel install --user --name .venv --display-name 'Python (.venv)'\""
+      },
+      "osx": {
+        "command": "bash -lc \"[ -d .venv ] || python -m venv .venv; source .venv/bin/activate; python -m pip install --upgrade pip; [ -f requirements.txt ] && python -m pip install -r requirements.txt || true; python -m pip install ipykernel notebook jupyter_client traitlets tornado nest-asyncio; python -m ipykernel install --user --name .venv --display-name 'Python (.venv)'\""
+      },
+      "linux": {
+        "command": "bash -lc \"[ -d .venv ] || python -m venv .venv; source .venv/bin/activate; python -m pip install --upgrade pip; [ -f requirements.txt ] && python -m pip install -r requirements.txt || true; python -m pip install ipykernel notebook jupyter_client traitlets tornado nest-asyncio; python -m ipykernel install --user --name .venv --display-name 'Python (.venv)'\""
+      },
+      "presentation": { "reveal": "silent" }
+    }
+  ]
+}
