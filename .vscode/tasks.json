@@ -11,12 +11,12 @@
         "command": "powershell -ExecutionPolicy Bypass -Command \"if (-Not (Test-Path .venv)) { py -m venv .venv }; .\\.venv\\Scripts\\Activate.ps1; python -m pip install --upgrade pip; if (Test-Path requirements.txt) { python -m pip install -r requirements.txt }; python -m pip install ipykernel notebook jupyter_client traitlets tornado nest-asyncio; python -m ipykernel install --user --name .venv --display-name 'Python (.venv)'\""
       },
       "osx": {
-        "command": "bash -lc \"[ -d .venv ] || python -m venv .venv; source .venv/bin/activate; python -m pip install --upgrade pip; [ -f requirements.txt ] && python -m pip install -r requirements.txt || true; python -m pip install ipykernel notebook jupyter_client traitlets tornado nest-asyncio; python -m ipykernel install --user --name .venv --display-name 'Python (.venv)'\""
+        "command": "bash -lc 'PY_BIN=$(command -v python3 || command -v python || echo \"\"); if command -v pyenv >/dev/null 2>&1; then eval \"$(pyenv init -)\"; PY_BIN=$(pyenv which python 2>/dev/null || echo \"$PY_BIN\"); fi; [ -n \"$PY_BIN\" ] || { echo \"No python interpreter found\"; exit 127; }; [ -d .venv ] || \"$PY_BIN\" -m venv .venv; source .venv/bin/activate; \"$PY_BIN\" -m pip install --upgrade pip; [ -f requirements.txt ] && \"$PY_BIN\" -m pip install -r requirements.txt || true; \"$PY_BIN\" -m pip install ipykernel notebook jupyter_client traitlets tornado nest-asyncio; \"$PY_BIN\" -m ipykernel install --user --name .venv --display-name \"Python (.venv)\"'"
       },
       "linux": {
-        "command": "bash -lc \"[ -d .venv ] || python -m venv .venv; source .venv/bin/activate; python -m pip install --upgrade pip; [ -f requirements.txt ] && python -m pip install -r requirements.txt || true; python -m pip install ipykernel notebook jupyter_client traitlets tornado nest-asyncio; python -m ipykernel install --user --name .venv --display-name 'Python (.venv)'\""
+        "command": "bash -lc 'PY_BIN=$(command -v python3 || command -v python || echo \"\"); if command -v pyenv >/dev/null 2>&1; then eval \"$(pyenv init -)\"; PY_BIN=$(pyenv which python 2>/dev/null || echo \"$PY_BIN\"); fi; [ -n \"$PY_BIN\" ] || { echo \"No python interpreter found\"; exit 127; }; [ -d .venv ] || \"$PY_BIN\" -m venv .venv; source .venv/bin/activate; \"$PY_BIN\" -m pip install --upgrade pip; [ -f requirements.txt ] && \"$PY_BIN\" -m pip install -r requirements.txt || true; \"$PY_BIN\" -m pip install ipykernel notebook jupyter_client traitlets tornado nest-asyncio; \"$PY_BIN\" -m ipykernel install --user --name .venv --display-name \"Python (.venv)\"'"
       },
-      "presentation": { "reveal": "silent" }
+      "presentation": { "reveal": "always" }
     }
   ]
 }

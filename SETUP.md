@@ -8,7 +8,7 @@
 
 3. Type **“Git: Clone”** and select it.
 
-4. Paste the repository URL.
+4. Paste the repository URL: **[https://github.com/ashloong/langchain-for-good.git](https://github.com/ashloong/langchain-for-good.git)**
 
 5. Choose a local folder where you want the project saved.
 
