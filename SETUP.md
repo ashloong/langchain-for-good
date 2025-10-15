@@ -14,7 +14,9 @@
 
 6. When prompted, click **Open** after cloning completes.
 
-### 2️⃣ When the folder opens, VS Code will automatically:
+### 2️⃣ Let VS Code set up
+
+When the folder opens, VS Code will automatically:
 
 - Create a local `.venv` virtual environment (if it doesn’t exist)
 
@@ -22,17 +24,16 @@
 
 - Add Jupyter support (`notebook`, `ipykernel`, etc.)
 
-- Register the kernel as **Python (.venv)** for notebooks
+- Register the kernel as `.venv` for notebooks
 
-If prompted to “Run tasks on folder open,” click **Allow**.
+Complete *(about 1-2 minutes)* when the terminal output contains:
 
-You don’t need to manually run `pip install -r requirements.txt`,
-VS Code handles it via `.vscode/tasks.json`.
+    Terminal will be resused by tasks, press any key to close it.
 
 ### 3️⃣ Run notebooks or scripts
 
 - Open any `.ipynb` file
 
-- Make sure the selected kernel (top right) is **Python (.venv)**
+- Click **Select Kernel** in the top-right corner and choose `.venv (Python)` from the list. VS Code will remember this selection automatically for future sessions.
 
 - Press `Shift + Enter` to run a cell, or `Ctrl + F5` to run an entire script
