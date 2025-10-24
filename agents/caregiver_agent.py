@@ -2,6 +2,9 @@ import os, re, json
 from typing import Dict, Optional
 from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage, SystemMessage
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path=".env")
 
 class CaregiverCompanionAgent:
     """Summarizes and explains medical notes in layman's terms."""
@@ -12,9 +15,12 @@ class CaregiverCompanionAgent:
     )
 
     def __init__(self, groq_api_key: Optional[str] = None, model_name="openai/gpt-oss-20b", temperature=0.0):
+
         self.api_key = groq_api_key or os.getenv("GROQ_API_KEY")
         if not self.api_key:
             raise ValueError("GROQ_API_KEY must be set.")
+
+        # Initialize the ChatGroq client
         self.client = ChatGroq(model=model_name, groq_api_key=self.api_key, temperature=temperature)
 
     def summarize_and_explain(self, text: str, redact_phi: bool = True) -> Dict[str, object]:
