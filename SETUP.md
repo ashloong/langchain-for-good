@@ -22,13 +22,11 @@ When the folder opens, VS Code will automatically:
 
 - Install all dependencies from `requirements.txt`
 
-- Add Jupyter support (`notebook`, `ipykernel`, etc.)
-
 - Register the kernel as `.venv` for notebooks
 
 Complete *(about 1-2 minutes)* when the terminal output contains:
 
-    Terminal will be resused by tasks, press any key to close it.
+    Terminal will be reused by tasks, press any key to close it.
 
 ### 3️⃣ Run notebooks or scripts
 
