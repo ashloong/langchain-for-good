@@ -6,9 +6,12 @@ It uses **LangGraph**, **LangChain**, and **Groq/ChatGPT LLMs** to build modular
 
 ---
 
-## Our Google Colab Notebook:
+### HealthLight Agent with Gradio Web UI:
 
-**[Link to HealthLight Agent with Gradio Web UI](https://colab.research.google.com/drive/1IPOwPDo9bpn5JcnG7zlqXx-k0W-7vQm1?usp=sharing#scrollTo=D6BIoI8qr9i8)**
+**[Click here to interact!](https://huggingface.co/spaces/kathrynkash/health-companion)**
+
+**[Google Colab Notebook](https://colab.research.google.com/drive/1IPOwPDo9bpn5JcnG7zlqXx-k0W-7vQm1?usp=sharing#scrollTo=D6BIoI8qr9i8)**
+
 
 ---
 
