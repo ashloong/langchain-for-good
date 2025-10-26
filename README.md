@@ -4,14 +4,19 @@ This repository contains the implementation of a **HealthLight Agentic AI**, des
 
 It uses **LangGraph**, **LangChain**, and **Groq/ChatGPT LLMs** to build modular, agentic reasoning pipelines.
 
+![team-photo](https://github.com/ashloong/langchain-for-good/blob/main/team-photo.png)
+
 ---
 
-### HealthLight Agent with Gradio Web UI:
+### Links
 
-**[Click here to interact!](https://huggingface.co/spaces/kathrynkash/health-companion)**
+- **[HealthLight Agent with Gradio Web UI](https://huggingface.co/spaces/kathrynkash/health-companion)**
 
-**[Google Colab Notebook](https://colab.research.google.com/drive/1IPOwPDo9bpn5JcnG7zlqXx-k0W-7vQm1?usp=sharing#scrollTo=D6BIoI8qr9i8)**
+- **[Presentation Slides](https://github.com/ashloong/langchain-for-good/blob/main/HealthLight%20-%20Universal%20Health%20Navigator.pdf)**
 
+- **[Google Colab Notebook](https://colab.research.google.com/drive/1IPOwPDo9bpn5JcnG7zlqXx-k0W-7vQm1?usp=sharing#scrollTo=D6BIoI8qr9i8)**
+
+- **[Google Drive](https://drive.google.com/drive/folders/1m_wLZYN14QVh8Tm4n59E5pjymtccwM4w?usp=sharing)**
 
 ---
 
@@ -129,4 +134,4 @@ Complete *(about 1-2 minutes)* when the terminal output contains:
 
 ---
 
-**Code4Impact Hackathon: LangChain Agents for Social Good** 🌍
+**Code4Impact Hackathon 2025: LangChain Agents for Social Good** 🌍
