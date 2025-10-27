@@ -35,7 +35,7 @@ It uses **LangGraph**, **LangChain**, and **Groq/ChatGPT LLMs** to build modular
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/mahsa-ebrahimian/langchain-for-good.git
+   git clone https://github.com/ashloong/langchain-for-good.git
    cd langchain-for-good
    ```
 
