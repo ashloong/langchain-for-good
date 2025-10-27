@@ -24,10 +24,14 @@ It uses **LangGraph**, **LangChain**, and **Groq/ChatGPT LLMs** to build modular
 
 ## 🚀 Getting Started
 
+Click to interact now: **[HealthLight Agent with Gradio Web UI](https://huggingface.co/spaces/kathrynkash/health-companion)**
+
+## OPTION 1. Local Installation
+
 ### Prerequisites
 
 * Python **3.10+**
-* A valid **GROQ API key** (set in your `.env` file)
+* Valid **GROQ and OPENAI API keys** (set in your `.env` file)
 * Virtual environment (recommended)
 
 ### Installation
@@ -39,7 +43,7 @@ It uses **LangGraph**, **LangChain**, and **Groq/ChatGPT LLMs** to build modular
    cd langchain-for-good
    ```
 
-2. **Create and activate a virtual environment**
+2. **Create and activate a virtual environment (optional)**
 
    ```bash
    python -m venv venv
@@ -96,7 +100,7 @@ langchain-for-good/
 
 ---
 
-## Visual Studio Code QUICKSTART
+## OPTION 2. Visual Studio Code QUICKSTART
 
 ### 1️⃣ Clone the repository
 
@@ -126,13 +130,11 @@ Complete *(about 1-2 minutes)* when the terminal output contains:
 
     Terminal will be reused by tasks, press any key to close it.
 
-### 3️⃣ Run notebooks or scripts
+### 3️⃣ Run `main.py`
 
-- Open any `.ipynb` file
-
-- Click **Select Kernel** in the top-right corner and choose `.venv (Python)` from the list. VS Code will remember this selection automatically for future sessions.
-
-- Press `Shift + Enter` to run a cell, or `Ctrl + F5` to run an entire script
+```bash
+python main.py
+```
 
 ---
 
