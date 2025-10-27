@@ -14,9 +14,9 @@ It uses **LangGraph**, **LangChain**, and **Groq/ChatGPT LLMs** to build modular
 
 - **[Demo Video](https://github.com/ashloong/langchain-for-good/blob/main/HealthLight-demo.mp4)**
 
-- **[Google Drive](https://drive.google.com/drive/folders/1m_wLZYN14QVh8Tm4n59E5pjymtccwM4w?usp=sharing)**
+- **[Google Drive (Demo, Slides)](https://drive.google.com/drive/folders/1m_wLZYN14QVh8Tm4n59E5pjymtccwM4w?usp=sharing)**
 
-- **[Google Colab Notebook (Demo, Slides)](https://colab.research.google.com/drive/1IPOwPDo9bpn5JcnG7zlqXx-k0W-7vQm1?usp=sharing#scrollTo=D6BIoI8qr9i8)**
+- **[Google Colab Notebook](https://colab.research.google.com/drive/1IPOwPDo9bpn5JcnG7zlqXx-k0W-7vQm1?usp=sharing#scrollTo=D6BIoI8qr9i8)**
 
 - **[HealthLight Agent with Gradio Web UI](https://huggingface.co/spaces/kathrynkash/health-companion)**
 
